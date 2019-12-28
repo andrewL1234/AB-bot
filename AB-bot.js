@@ -26,4 +26,4 @@ client.on('message', message => {
 });
 
 // Log our bot in using the token from https://discordapp.com/developers/applications/me
-client.login('NTA1OTE4NjkwMTQ3OTU4ODA1.Xgdn-g.FguGLfmk-YTOsp4BrCvKbOmAKc0');
+client.login('NTA1OTE4NjkwMTQ3OTU4ODA1.XgdvjQ.Wsgg0Ukj9xoCn6HoHBYcar4fPNw');
