@@ -21,7 +21,7 @@ client.on('message', message => {
 
   //reply command
   if (command === 'say') {
-    if(args) {
+    if(args.length() === 0) {
       message.channel.send(args.join(' '));
     } else {
       message.channel.send("Tell me what you want me to say");
