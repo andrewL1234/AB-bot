@@ -23,7 +23,7 @@ client.on('message', message => {
 
   //say command
   if (command === 'say') {
-    if(args.length == 0) {
+    if(args.length !== 0) {
       message.channel.send(args.join(' '));
     } else {
       message.channel.send("Tell me what you want me to say");
