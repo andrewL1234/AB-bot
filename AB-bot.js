@@ -31,6 +31,10 @@ client.on('message', message => {
     console.log('works');
     message.channel.send("hi");
   }
+  if (message.content === "hi") {
+    console.log('works')
+    message.channel.send('hi')
+  }
 
   // if (message.content.toLowerCase() === 'hi') {
   //   message.reply('hello');
