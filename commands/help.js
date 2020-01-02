@@ -1,5 +1,4 @@
 const Discord = module.require("discord.js");
-const fs = module.require("fs");
 const cmdDescriptions = {
 	"!box": "Opens a box",
 	"!help": "Bot help",
@@ -19,8 +18,7 @@ module.exports.run = (client, message, args) => {
 
 	let times = 0;
 	for(item in Object.keys(cmdDescriptions)) {
-		// let command = jsfiles[times].split(".")[0];
-		helpEmbed.addField(`**${item}**`, `${cmdDescriptions.item}`);
+		helpEmbed.addField(`**${Object.keys(cmdDescriptions)[item]}**`, `${Object.values(cmdDescriptions)[item]}`);
 		times++;
 	}
 
