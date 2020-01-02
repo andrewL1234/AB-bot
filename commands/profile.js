@@ -1,6 +1,13 @@
+const Discord = module.require("discord.js");
+
 module.exports.run = (client, message, args) => {
-	message.channel.send("andew bad");
+
+  const helpEmbed = new Discord.RichEmbed()
+  .setTitle("Bot Help")
+  .setColor("#06172e")
+
 }
-module.exports.help = {
+//yeet
+module-.exports.help = {
 	name: "profile"
 };
