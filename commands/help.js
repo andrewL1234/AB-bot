@@ -2,15 +2,15 @@ const Discord = module.require("discord.js");
 const fs = module.require("fs");
 let jsfiles;
 const cmdDescriptions = {
-	"box": "Opens a box",
-	"help": "Bot help",
-	"onlineusers": "Gets the amount of online users",
-	"risk": "Risk xp",
-	"rng": "Random Number Generator",
-	"roll": "Roll dice",
-	"rps": "Rock, paper, scissors",
-	"timer": "Set a timer",
-	"userinfo": "Get the info of an user"
+	"!box": "Opens a box",
+	"!help": "Bot help",
+	"!onlineusers": "Gets the amount of online users",
+	"!risk": "Risk xp",
+	"!rng": "Random Number Generator",
+	"!roll": "Roll dice",
+	"!rps": "Rock, paper, scissors",
+	"!timer": "Set a timer",
+	"!userinfo": "Get the info of an user"
 }
 fs.readdir('./commands/', (err, files) => {
 	if (err) console.log(err);
@@ -26,7 +26,6 @@ module.exports.run = (client, message, args) => {
 	let times = 0;
 	while(times < jsfiles.length) {
 		let command = jsfiles[times].split(".")[0];
-		helpEmbed.addField(`**${command}**`, `\`${cmdDescriptions[command]}\``);
 		times++;
 	}
 
