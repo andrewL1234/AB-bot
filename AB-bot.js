@@ -7,7 +7,7 @@ client.on('ready', () => {
 });
 
 client.commands = new Discord.Collection();
-fs.readdir('../commands/', (err, files) => {
+fs.readdir('./commands/', (err, files) => {
 	if(err) console.log(err);
 
 	//split the file name by "."(testing.js -> ["testing", "js"] and if the last element is "js", it gets added
@@ -19,7 +19,7 @@ fs.readdir('../commands/', (err, files) => {
 	console.log(`Loading ${jsfiles.length} files`);
 	//goes through the files, requires each one, and sets it in the commands map, name as key and file as value
 	jsfiles.forEach((f, i) => {
-		let getFile = require(`../commands/${f}`)
+		let getFile = require(`./commands/${f}`)
 		console.log(`File ${i+1}: ${f}`);
 		client.commands.set(getFile.help.name, getFile);
 	});
