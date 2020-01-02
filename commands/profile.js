@@ -5,7 +5,7 @@ module.exports.run = (client, message, args) => {
   const pEmbed = new Discord.RichEmbed()
   .setTitle("Profile")
   .setColor("#06172e")
-  .setFooter(${message.author.username}`, message.author.displayAvatarURL)
+  .setFooter(`${message.author.username}`, message.author.displayAvatarURL)
   message.channel.send(pEmbed);
 }
 //yeet
