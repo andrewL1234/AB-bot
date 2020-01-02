@@ -14,7 +14,7 @@ client.on('message', message => {
   let prefix = "!";
 	let messageArray = message.content.split(" ");
 	let args = messageArray.slice(1);
-	let command = messageArray[0];
+	let command = messageArray[0].slice(1);
 
   console.log(command)
   //if(!command.startsWith(prefix)) return;
