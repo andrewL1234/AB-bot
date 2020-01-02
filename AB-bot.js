@@ -19,9 +19,11 @@ client.on('message', message => {
   console.log(command)
   //if(!command.startsWith(prefix)) return;
 
-  //reply command
+  console.log(args)
+
+  //say command
   if (command === 'say') {
-    if(args.length() === 0) {
+    if(args) {
       message.channel.send(args.join(' '));
     } else {
       message.channel.send("Tell me what you want me to say");
