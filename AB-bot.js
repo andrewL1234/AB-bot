@@ -16,7 +16,7 @@ client.on('message', message => {
 	let args = messageArray.slice(1);
 	let command = messageArray[0];
 
-  if(!command.startsWith(prefix)) return;
+  //if(!command.startsWith(prefix)) return;
 
   //reply command
   if (command === 'say') {
