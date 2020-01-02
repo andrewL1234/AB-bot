@@ -21,11 +21,11 @@ module.exports.run = (client, message, args) => {
 	const helpEmbed = new Discord.RichEmbed()
 	.setTitle("Bot Help")
 	.setColor("#3afbff")
-	.addField("**Prefix**", "**~**")
 
 	let times = 0;
 	while(times < jsfiles.length) {
 		let command = jsfiles[times].split(".")[0];
+		helpEmbed.addField(`**${command}**`, `\`${cmdDescriptions[command]}\``);
 		times++;
 	}
 
