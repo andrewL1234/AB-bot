@@ -6,6 +6,23 @@ client.on('ready', () => {
   console.log('I am ready!');
 });
 
+fs.readdir('./commands/', (err, files) => {
+	if(err) console.log(err);
+
+	//split the file name by "."(testing.js -> ["testing", "js"] and if the last element is "js", it gets added
+	let jsfiles = files.filter(f => f.split(".").pop() === "js");
+	if(files.length <= 0) {
+		console.log("There are no commands in this folder.");
+		return;
+	}
+	console.log(`Loading ${jsfiles.length} files`);
+	//goes through the files, requires each one, and sets it in the commands map, name as key and file as value
+	jsfiles.forEach((f, i) => {
+		let getFile = require(`./commands/${f}`)
+		console.log(`File ${i+1}: ${f}`);
+		client.commands.set(getFile.help.name, getFile);
+	});
+});
 
 client.on('message', message => {
   if(message.channel.type === "dm") return;
@@ -27,7 +44,7 @@ client.on('message', message => {
       message.channel.send("Tell me what you want me to say");
     }
   }
-
+  //random number command
   if (command === '!rng') {
     const minimum = Number(args[0]);
   	const maximum = Number(args[1]);
