@@ -14,15 +14,13 @@ client.on('message', message => {
   let prefix = "!";
 	let messageArray = message.content.split(" ");
 	let args = messageArray.slice(1);
-	let command = messageArray[0].slice(1);
+	let command = messageArray[0];
 
-  console.log(command)
-  //if(!command.startsWith(prefix)) return;
+  if(!command.startsWith(prefix)) return;
 
-  console.log(args)
 
   //say command
-  if (command === 'say') {
+  if (command === '!say') {
     if(args.length !== 0) {
       message.channel.send(args.join(' '));
     } else {
@@ -30,10 +28,25 @@ client.on('message', message => {
     }
   }
 
-  if (message.content.toLowerCase() === "hi") {
-    console.log('works')
-    message.channel.send('hi')
+  if (command === '!rng') {
+    const minimum = Number(args[0]);
+  	const maximum = Number(args[1]);
+  	if(args.length !== 2) {
+  		return message.channel.send("Enter TWO numbers after the command");
+
+  	}
+  	else if(isNaN(minimum) || isNaN(maximum)) {
+  		return message.channel.send("Enter two NUMBERS after the command");
+  	}
+    else if(maximum <= minimum) {
+      return message.channel.send("The first number has to be smaller than the second")
+    } else {
+  		const randomNumber = Math.floor(Math.random() * (maximum - minimum + 1) + minimum);
+  		message.channel.send(`Your random number was ${randomNumber}`);
+  	}
   }
+
+
 
 });
 
