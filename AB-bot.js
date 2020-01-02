@@ -24,7 +24,7 @@ fs.readdir('./commands/', (err, files) => {
 		client.commands.set(getFile.help.name, getFile);
 	});
 });
-
+//message
 client.on('message', message => {
   if(message.channel.type === "dm") return;
 	if(message.author.bot) return;
