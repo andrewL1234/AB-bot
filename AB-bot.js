@@ -40,35 +40,6 @@ client.on('message', message => {
 
 	if(cmd) cmd.run(client, message, args);
 
-  //say command
-  if (command === '!say') {
-    if(args.length !== 0) {
-      message.channel.send(args.join(' '));
-    } else {
-      message.channel.send("Tell me what you want me to say");
-    }
-  }
-  //random number command
-  // if (command === '!rng') {
-  //   const minimum = Number(args[0]);
-  // 	const maximum = Number(args[1]);
-  // 	if(args.length !== 2) {
-  // 		return message.channel.send("Enter TWO numbers after the command");
-  //
-  // 	}
-  // 	else if(isNaN(minimum) || isNaN(maximum)) {
-  // 		return message.channel.send("Enter two NUMBERS after the command");
-  // 	}
-  //   else if(maximum <= minimum) {
-  //     return message.channel.send("The first number has to be smaller than the second")
-  //   } else {
-  // 		const randomNumber = Math.floor(Math.random() * (maximum - minimum + 1) + minimum);
-  // 		message.channel.send(`Your random number was ${randomNumber}`);
-  // 	}
-  // }
-
-
-
 });
 
 
