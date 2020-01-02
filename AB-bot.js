@@ -6,6 +6,7 @@ client.on('ready', () => {
   console.log('I am ready!');
 });
 
+client.commands = new Discord.Collection();
 fs.readdir('./commands/', (err, files) => {
 	if(err) console.log(err);
 
