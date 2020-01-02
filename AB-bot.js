@@ -11,11 +11,12 @@ client.on('message', message => {
   if(message.channel.type === "dm") return;
 	if(message.author.bot) return;
 
-  let prefix = "~";
+  let prefix = "!";
 	let messageArray = message.content.split(" ");
 	let args = messageArray.slice(1);
 	let command = messageArray[0];
 
+  console.log(command)
   //if(!command.startsWith(prefix)) return;
 
   //reply command
