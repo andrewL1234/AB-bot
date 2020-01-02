@@ -1,4 +1,5 @@
 module.exports.run = (client, message, args) => {
+  console.log('works')
 	const minimum = Number(args[0]);
 	const maximum = Number(args[1]);
 	if(args.length !== 2) {
