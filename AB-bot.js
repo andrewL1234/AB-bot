@@ -28,6 +28,7 @@ client.on('message', message => {
   }
 
   if (command === 'hi') {
+    console.log('works');
     message.channel.send("hi");
   }
 
