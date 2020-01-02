@@ -23,17 +23,13 @@ client.on('message', message => {
 
   //say command
   if (command === 'say') {
-    if(args) {
+    if(args.length == 0) {
       message.channel.send(args.join(' '));
     } else {
       message.channel.send("Tell me what you want me to say");
     }
   }
 
-  if (command === 'hi') {
-    console.log('works');
-    message.channel.send("hi");
-  }
   if (message.content === "hi") {
     console.log('works')
     message.channel.send('hi')
