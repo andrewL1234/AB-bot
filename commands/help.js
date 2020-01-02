@@ -19,7 +19,7 @@ module.exports.run = (client, message, args) => {
 
 	let times = 0;
 	for(item in Object.keys(cmdDescriptions)) {
-		let command = jsfiles[times].split(".")[0];
+		// let command = jsfiles[times].split(".")[0];
 		helpEmbed.addField(`**${item}**`, `${cmdDescriptions.item}`);
 		times++;
 	}
