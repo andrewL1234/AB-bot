@@ -20,7 +20,15 @@ client.on('message', message => {
 
   //reply command
   if (command === 'say') {
-    message.channel.send(args.join(' '));
+    if(args) {
+      message.channel.send(args.join(' '));
+    } else {
+      message.channel.send("Tell me what you want me to say");
+    }
+  }
+
+  if (command === 'hi') {
+    message.channel.send("hi");
   }
 
   // if (message.content.toLowerCase() === 'hi') {
