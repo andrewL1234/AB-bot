@@ -8,6 +8,6 @@ module.exports.run = (client, message, args) => {
 
 }
 //yeet
-module-.exports.help = {
+module.exports.help = {
 	name: "profile"
 };
