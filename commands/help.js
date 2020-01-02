@@ -14,7 +14,7 @@ const cmdDescriptions = {
 module.exports.run = (client, message, args) => {
 	const helpEmbed = new Discord.RichEmbed()
 	.setTitle("Bot Help")
-	.setColor("#3afbff")
+	.setColor("#020042")
 
 	let times = 0;
 	for(item in Object.keys(cmdDescriptions)) {
