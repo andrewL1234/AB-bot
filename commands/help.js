@@ -18,7 +18,7 @@ module.exports.run = (client, message, args) => {
 	.setColor("#3afbff")
 
 	let times = 0;
-	while(for item in Object.keys(cmdDescriptions)) {
+	for(item in Object.keys(cmdDescriptions)) {
 		let command = jsfiles[times].split(".")[0];
 		helpEmbed.addField(`**${item}**`, `${cmdDescriptions.item}`);
 		times++;
