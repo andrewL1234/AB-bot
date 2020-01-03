@@ -25,7 +25,7 @@ xp.findOne({
   } else {
     pEmbed.addField(res.username, res.xp + "xp.");
   }
-}
+
 
   message.channel.send(pEmbed)
 })
