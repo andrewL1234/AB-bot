@@ -9,4 +9,9 @@ const Xp = new Schema({
   xp: Number
 });
 
-module.exports = mongoose.model("xp", Schema)
+var xpSchema = caseNote.discriminator('xp', xpShema_raw);
+var xp = mongoose.model('xp');
+
+exports.xpSchema = xpSchema;
+module.exports = xp;
+//( ͡° ͜ʖ ͡°)
