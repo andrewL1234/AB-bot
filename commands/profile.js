@@ -27,6 +27,7 @@ xp.findOne({
 
   message.channel.send(pEmbed)
 })
+}
 //yeet
 module.exports.help = {
 	name: "profile"
