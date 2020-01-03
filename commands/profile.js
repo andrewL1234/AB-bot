@@ -4,6 +4,7 @@ mongoose.connect('mongodb://127.0.0.1/xp', {
   useNewUrlParser: true,
 });
 const xp = require("../models/xp.js");
+const Xp = mongoose.model('xp.js', xpSchema);
 
 module.exports.run = (client, message, args) => {
 
@@ -22,7 +23,8 @@ module.exports.run = (client, message, args) => {
 	    pEmbed.addField("You do not appear to have any xp...");
 	  } else {
 			console.log(res)
-	    pEmbed.addField(res.username, res.xp + "xp.");
+	    // pEmbed.addField(res.username, res.xp + "xp.");
+      pEmbed.addField(Xp.xp);
 	  }
 
 	})
