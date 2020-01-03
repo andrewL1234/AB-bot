@@ -1,6 +1,6 @@
 const Discord = module.require("discord.js");
 const mongoose = require("mongoose")
-mongoose.connect('mongodb://localhost/local', {
+mongoose.connect('mongodb://localhost/xp', {
   useNewUrlParser: true,
 });
 const xp = require("../models/xp.js");
