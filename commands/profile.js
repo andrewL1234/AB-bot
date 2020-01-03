@@ -5,11 +5,11 @@ mongoose.connect('mongodb://localhost/local', {
 });
 const xp = require("../models/xp.js");
 
-module.exports.run = async (client, message, args) => {
+module.exports.run = (client, message, args) => {
 
   await message.delete()
 
-  let pEmbed = new Discord.RichEmbed()
+  const pEmbed = new Discord.RichEmbed()
   .setTitle("Profile")
   .setColor("#06172e")
   .setThumbnail(`${message.author.username}`, message.author.displayAvatarURL);
