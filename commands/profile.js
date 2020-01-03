@@ -1,6 +1,6 @@
 const Discord = module.require("discord.js");
 const mongoose = require("mongoose")
-await mongoose.connect('mongodb://localhost/local', {
+mongoose.connect('mongodb://localhost/local', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
