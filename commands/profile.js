@@ -12,22 +12,20 @@ module.exports.run = (client, message, args) => {
   .setColor("#06172e")
   .setFooter(`${message.author.username}`, message.author.displayAvatarURL);
 
-xp.findOne({
-  userID: message.author.id,
-  serverID: message.guild.id
-}, (err, res) => {
-  if (err) console.log(err);
+	xp.findOne({
+	  userID: message.author.id,
+	  serverID: message.guild.id
+	}, (err, res) => {
+	  if (err) console.log(err);
 
-  if(!res) {
-    pEmbed.addField("You do not appear to have any xp...");
-  } else {
-    pEmbed.addField(res.username, res.xp + "xp.");
-  }
+	  if(!res) {
+	    pEmbed.addField("You do not appear to have any xp...");
+	  } else {
+	    pEmbed.addField(res.username, res.xp + "xp.");
+	  }
 
-
-
-})
-message.channel.send(pEmbed)
+	})
+	message.channel.send(pEmbed)
 }
 //yeet
 module.exports.help = {
