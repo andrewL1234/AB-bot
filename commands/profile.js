@@ -28,7 +28,7 @@ module.exports.run = (client, message, args) => {
 	})
 	message.channel.send(pEmbed)
 }
-//yeet
+//yeet f
 module.exports.help = {
 	name: "profile"
 };
