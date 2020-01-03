@@ -21,6 +21,7 @@ module.exports.run = (client, message, args) => {
 	  if(!res) {
 	    pEmbed.addField("You do not appear to have any xp...");
 	  } else {
+			console.log(res)
 	    pEmbed.addField(res.username, res.xp + "xp.");
 	  }
 
