@@ -7,4 +7,4 @@ const xpSchema = mongoose.Schema({
   xp: Number
 });
 
-module.exports = mongoose.model("xp", coinSchema)
+module.exports = mongoose.model("xp", xpSchema)
