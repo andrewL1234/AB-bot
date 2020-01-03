@@ -4,7 +4,7 @@ mongoose.connect('mongodb://127.0.0.1/xp', {
   useNewUrlParser: true,
 });
 const xp = require("../models/xp.js");
-const Xp = mongoose.model('xp.js', mySchema);
+const Xp = mongoose.model('Xp', mySchema);
 
 module.exports.run = (client, message, args) => {
 

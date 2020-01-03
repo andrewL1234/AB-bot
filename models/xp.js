@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const xpSchema = mongoose.Schema({
+const Xp = new Schema({
   userID: String,
   username: String,
   serverID: String,
