@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+var caseNote = mongoose.model('caseNote');
 
 
 const Xp = new Schema({
