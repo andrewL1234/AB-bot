@@ -7,8 +7,6 @@ const xp = require("../models/xp.js");
 
 module.exports.run = (client, message, args) => {
 
-  await message.delete()
-
   const pEmbed = new Discord.RichEmbed()
   .setTitle("Profile")
   .setColor("#06172e")
