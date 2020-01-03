@@ -1,7 +1,9 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 var caseNote = mongoose.model('xp');
-
+var ObjectId = mongoose.Schema.Types.ObjectId;
+var models = require('./');
+var autopopulate = require('mongoose-autopopulate');
 
 const Xp = new Schema({
   userID: String,

@@ -3,8 +3,8 @@ const mongoose = require("mongoose")
 mongoose.connect('mongodb+srv://${process.env.MUSERNAME}:${process.env.MPASSWORD}@ab-bot-wohsi.mongodb.net/xp', {
   useNewUrlParser: true,
 });
-const xp = require("../models/xp.js");
-const Xp = mongoose.model('xp');
+const xp = require("../models/xps.js");
+// const Xp = mongoose.model('xp');
 
 module.exports.run = (client, message, args) => {
 
@@ -23,8 +23,8 @@ module.exports.run = (client, message, args) => {
       pEmbed.addField("You do not appear to have any xp...");
     } else {
       console.log(res)
-      // pEmbed.addField(res.username, res.xp + "xp.");
-      pEmbed.addField(Xp.xp);
+      pEmbed.addField(res.username, res.xp + "xp.");
+      // pEmbed.addField(Xp.xp);
     }
 
   })
