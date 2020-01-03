@@ -9,4 +9,4 @@ const Xp = new Schema({
   xp: Number
 });
 
-module.exports = mongoose.model("xp",schema)
+module.exports = mongoose.model("xp", Schema)
