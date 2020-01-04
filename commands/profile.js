@@ -50,7 +50,7 @@ module.exports.run = (client, message, args) => {
       {xp: 12})
     console.log(xpp.xp);
 
-    //pEmbed.addField(xpp);
+    pEmbed.addField("**XP**", xpp.xp);
 
   // xp.findOne({
   //   userID: message.author.id,
