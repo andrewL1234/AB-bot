@@ -7,7 +7,7 @@ var id = message.author.id;
 var usne = message.author.username;
 var server = message.guild.id;
 
-const mongoose = require("mongoose");
+
 mongoose.connect('mongodb://localhost/test', {
   useNewUrlParser: true,
 });
