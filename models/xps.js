@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-var caseNote = mongoose.model('xp');
+
 var ObjectId = mongoose.Schema.Types.ObjectId;
 var models = require('./');
 var autopopulate = require('mongoose-autopopulate');
@@ -11,9 +11,9 @@ const Xp = new Schema({
   serverID: String,
   xp: Number
 });
-
-var xpSchema = caseNote.discriminator('xp', xpShema_raw);
-var xp = mongoose.model('xp');
+var caseNote = mongoose.model('Xp');
+var xpSchema = caseNote.discriminator('Xp', xpShema_raw);
+var xp = mongoose.model('Xp');
 
 exports.xpSchema = xpSchema;
 module.exports = xp;
