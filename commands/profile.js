@@ -26,7 +26,7 @@ module.exports.run = (client, message, args) => {
   if(args.length === 0) {
     let id = message.author.id;
   }
-  else if(args.length === 0) {
+  else if(args.length === 1) {
     let userRequired = message.mentions.users.first()
     if(!userRequired) {
       return message.channel.send("Either just type the command to see you profile or @ someone to see theirs")
@@ -50,7 +50,8 @@ module.exports.run = (client, message, args) => {
       {xp: 12})
     console.log(xpp.xp);
 
-    pEmbed.addField(xpp);
+    //pEmbed.addField(xpp);
+
   // xp.findOne({
   //   userID: message.author.id,
   //   serverID: message.guild.id
