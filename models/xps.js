@@ -26,6 +26,7 @@ const xpSchema = new Schema({
 });
 
 const xp = mongoose.model('xp', xpSchema);
+const routes = require('./routes')
 // exports.xpSchema = xpSchema;
 // module.exports = xp;
 //( ͡° ͜ʖ ͡°)
