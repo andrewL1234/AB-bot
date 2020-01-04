@@ -1,6 +1,6 @@
 const Discord = module.require("discord.js");
-const mongoose = require("mongoose")
-const dbs = process.env.MONGODB_URL
+const mongoose = require("mongoose");
+const dbs = process.env.MONGODB_URL;
 mongoose.connect(dbs, {
   useNewUrlParser: true,
 });
@@ -24,13 +24,16 @@ const xp = mongoose.model('xp', xpSchema);
 
 module.exports.run = (client, message, args) => {
   const profEmbed = new Discord.RichEmbed()
+  let id = message.author.id; wait
+  let usne = message.author.username;
+  var server = message.guild.id;
 
   if(args.length === 0) {
     profEmbed.setTitle(`Profile`)
     let id = message.author.id;
   }
   else if(args.length === 1) {
-    let userRequired = message.mentions.users.first()
+    let  = message.mentions.users.first()
     if(!userRequired) {
       return message.channel.send("Either just type the command to see you profile or @ someone to see theirs")
     }
@@ -39,8 +42,8 @@ module.exports.run = (client, message, args) => {
     //this is for !profile "thing" "thing" (2 args)
     return message.channel.send("Either just type the command to see you profile or @ someone to see theirs")
   }
-  let userName = message.author.username;
-  var server = message.guild.id;
+
+
 
   profEmbed.setColor("#06172e")
     .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL);
@@ -50,8 +53,9 @@ module.exports.run = (client, message, args) => {
       {username: usne},
       {serverID: server},
       {xp: 12})
-    console.log(exp.xp);
 
+    console.log(exp.xp);
+    profEmbed.addField(`User: ${}`)
     profEmbed.addField(`XP: ${exp.xp}`);
 
   // xp.findOne({
