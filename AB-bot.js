@@ -46,9 +46,11 @@ client.on('message', message => {
 	if(message.author.bot) return;
 
   if(xpInfo[message.author.id]) {
+    console.log('work')
     xpInfo[message.author.id].xp += 5;
   }
   fs.writeFile('./xp.json', JSON.stringify(xpInfo), (err) => {
+    console.log(xpInfo[message.author.id].xp)
 	  if(err) console.log(err)
 	});
 
