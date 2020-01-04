@@ -5,7 +5,7 @@ mongoose.connect(dbs, {
   useNewUrlParser: true,
 });
 
-
+//WHAT IS THE SERVER-ID FOR IN THE SCHEMA BRANODN
 
 // mongoose.connect('mongodb://localhost/test', {
 //   useNewUrlParser: true,
@@ -24,10 +24,18 @@ const xp = mongoose.model('xp', xpSchema);
 
 module.exports.run = (client, message, args) => {
   if(args.length === 0) {
-    console.log('set id as msg author')
+    let id = message.author.id;
   }
-  let id = message.author.id;
-  let userNme = message.author.username;
+  else if(args.length === 0) {
+    let userRequired = message.mentions.users.first()
+    if(!userRequired) {
+      return message.channel.send("Either just type the command to see you profile or @ someone to see theirs")
+    }
+  } else {
+    //this is for !profile "thing" "thing" (2 args)
+    return message.channel.send("Either just type the command to see you profile or @ someone to see theirs")
+  }
+  let userName = message.author.username;
   var server = message.guild.id;
   const pEmbed = new Discord.RichEmbed()
     .setTitle("Profile")

@@ -14,7 +14,7 @@ mongoose.connect(dbs, {
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-  console.log('connection succesful');
+  console.log('Connected to MongoDB successfully');
 });
 
 client.on('ready', () => {
