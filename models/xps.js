@@ -18,14 +18,14 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 
-const xp = new Schema({
+const xpSchema = new Schema({
   userID: String,
   username: String,
   serverID: String,
   xp: Number
 });
 
-const xp = mongoose.model('xp', mySchema);
+const xp = mongoose.model('xp', xpSchema);
 // exports.xpSchema = xpSchema;
 // module.exports = xp;
 //( ͡° ͜ʖ ͡°)
