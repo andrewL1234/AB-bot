@@ -3,9 +3,7 @@ const mongoose = require("mongoose")
 mongoose.connect('mongodb+srv://${process.env.MUSERNAME}:${process.env.MPASSWORD}@ab-bot-wohsi.mongodb.net/xp', {
   useNewUrlParser: true,
 });
-var id = message.author.id;
-var usne = message.author.username;
-var server = message.guild.id;
+
 
 
 mongoose.connect('mongodb://localhost/test', {
@@ -24,7 +22,9 @@ const xpSchema = new Schema({
 const xp = mongoose.model('xp', xpSchema);
 
 module.exports.run = (client, message, args) => {
-
+  var id = message.author.id;
+  var usne = message.author.username;
+  var server = message.guild.id;
   const pEmbed = new Discord.RichEmbed()
     .setTitle("Profile")
     .setColor("#06172e")
