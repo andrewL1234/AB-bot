@@ -45,14 +45,14 @@ module.exports.run = (client, message, args) => {
   profEmbed.setColor("#06172e")
     .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL);
 
-    var xpp = new xp(
+    var exp = new xp(
       //{userID: id},
       //{username: usne},
       //{serverID: server},
       {xp: 12})
-    console.log(xpp.xp);
+    console.log(exp.xp);
 
-    profEmbed.addField("**XP**", xpp.xp);
+    profEmbed.addField(`XP ${exp.xp}`);
 
   // xp.findOne({
   //   userID: message.author.id,
