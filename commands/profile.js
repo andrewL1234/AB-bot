@@ -23,13 +23,17 @@ const xpSchema = new Schema({
 const xp = mongoose.model('xp', xpSchema);
 
 module.exports.run = (client, message, args) => {
-  var id = message.author.id;
-  var usne = message.author.username;
+  if(args.length === 0) {
+    console.log('set id as msg author')
+  }
+  let id = message.author.id;
+  let userNme = message.author.username;
   var server = message.guild.id;
   const pEmbed = new Discord.RichEmbed()
     .setTitle("Profile")
     .setColor("#06172e")
     .setFooter(`${message.author.username}`, message.author.displayAvatarURL);
+
 
     var xpp = new xp(
       //{userID: id},
