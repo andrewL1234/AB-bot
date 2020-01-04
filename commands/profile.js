@@ -3,8 +3,8 @@ const mongoose = require("mongoose")
 mongoose.connect('mongodb+srv://${process.env.MUSERNAME}:${process.env.MPASSWORD}@ab-bot-wohsi.mongodb.net/xp', {
   useNewUrlParser: true,
 });
-const xp = require("/app/models/xps.js");
-// const Xp = mongoose.model('xp');
+
+ const xp = mongoose.model('xp');
 
 module.exports.run = (client, message, args) => {
 
