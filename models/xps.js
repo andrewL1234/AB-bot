@@ -19,7 +19,7 @@ const mongoose = require("mongoose");
 //   useNewUrlParser: true,
 // });
 const dbs = process.env.MONGODB_URL
-mongoose.connect('dbs', {
+mongoose.connect(dbs, {
   useNewUrlParser: true,
 });
 const Schema = mongoose.Schema;

@@ -1,7 +1,7 @@
 const Discord = module.require("discord.js");
 const mongoose = require("mongoose")
 const dbs = process.env.MONGODB_URL
-mongoose.connect('dbs', {
+mongoose.connect(dbs, {
   useNewUrlParser: true,
 });
 

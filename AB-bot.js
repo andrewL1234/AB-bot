@@ -5,7 +5,7 @@ const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const dbs = process.env.MONGODB_URL
 
-mongoose.connect('dbs', {
+mongoose.connect(dbs, {
   useNewUrlParser: true,
 });
 // mongoose.connect('mongodb://localhost/test', {
