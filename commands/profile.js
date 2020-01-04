@@ -4,7 +4,7 @@ mongoose.connect('mongodb+srv://${process.env.MUSERNAME}:${process.env.MPASSWORD
   useNewUrlParser: true,
 });
 
- const xp = mongoose.model('Xp');
+ const xp = mongoose.model('xp');
 
 module.exports.run = (client, message, args) => {
 
