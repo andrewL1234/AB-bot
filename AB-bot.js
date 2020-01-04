@@ -45,6 +45,13 @@ client.on('message', message => {
   if(message.channel.type === "dm") return;
 	if(message.author.bot) return;
 
+  if(xpInfo[message.author.id]) {
+    xpInfo[message.author.id].xp += 5;
+  }
+  fs.writeFile('./xp.json', JSON.stringify(xp), (err) => {
+	  if(err) console.log(err)
+	});
+
   let prefix = "!";
 	let messageArray = message.content.split(" ");
 	let args = messageArray.slice(1);
