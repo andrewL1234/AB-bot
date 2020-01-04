@@ -52,7 +52,7 @@ module.exports.run = (client, message, args) => {
       {xp: 12})
     console.log(exp.xp);
 
-    profEmbed.addField(`XP: ${e}`);
+    profEmbed.addField(`XP: `);
 
   // xp.findOne({
   //   userID: message.author.id,
