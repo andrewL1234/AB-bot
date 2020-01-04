@@ -1,14 +1,14 @@
 const Discord = module.require("discord.js");
 const mongoose = require("mongoose")
-// mongoose.connect('mongodb+srv://${process.env.MUSERNAME}:${process.env.MPASSWORD}@ab-bot-wohsi.mongodb.net/xp', {
-//   useNewUrlParser: true,
-// });
-
-
-
-mongoose.connect('mongodb://localhost/test', {
+mongoose.connect('mongodb+srv://${process.env.MUSERNAME}:${process.env.MPASSWORD}@ab-bot-wohsi.mongodb.net/xp', {
   useNewUrlParser: true,
 });
+
+
+
+// mongoose.connect('mongodb://localhost/test', {
+//   useNewUrlParser: true,
+// });
 const Schema = mongoose.Schema;
 
 

@@ -15,7 +15,10 @@
 // var xpSchema = caseNote.discriminator('Xp', xpShema_raw);
 // var xp = mongoose.model('Xp');
 const mongoose = require("mongoose");
-mongoose.connect('mongodb://localhost/test', {
+// mongoose.connect('mongodb://localhost/test', {
+//   useNewUrlParser: true,
+// });
+mongoose.connect('mongodb+srv://${process.env.MUSERNAME}:${process.env.MPASSWORD}@ab-bot-wohsi.mongodb.net/xp', {
   useNewUrlParser: true,
 });
 const Schema = mongoose.Schema;

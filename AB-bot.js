@@ -2,9 +2,12 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/test', {
+mongoose.connect('mongodb+srv://${process.env.MUSERNAME}:${process.env.MPASSWORD}@ab-bot-wohsi.mongodb.net/xp', {
   useNewUrlParser: true,
 });
+// mongoose.connect('mongodb://localhost/test', {
+//   useNewUrlParser: true,
+// });
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
