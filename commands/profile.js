@@ -23,7 +23,10 @@ const xpSchema = new Schema({
 const xp = mongoose.model('xp', xpSchema);
 
 module.exports.run = (client, message, args) => {
+  const profEmbed = new Discord.RichEmbed()
+
   if(args.length === 0) {
+    profEmbed.setTitle(`Profile`)
     let id = message.author.id;
   }
   else if(args.length === 1) {
@@ -31,17 +34,16 @@ module.exports.run = (client, message, args) => {
     if(!userRequired) {
       return message.channel.send("Either just type the command to see you profile or @ someone to see theirs")
     }
+    profEmbed.setTitle(`Profile of ${userRequired.username}`)
   } else {
     //this is for !profile "thing" "thing" (2 args)
     return message.channel.send("Either just type the command to see you profile or @ someone to see theirs")
   }
   let userName = message.author.username;
   var server = message.guild.id;
-  const pEmbed = new Discord.RichEmbed()
-    .setTitle("Profile")
-    .setColor("#06172e")
-    .setFooter(`${message.author.username}`, message.author.displayAvatarURL);
 
+  profEmbed.setColor("#06172e")
+    .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL);
 
     var xpp = new xp(
       //{userID: id},
@@ -50,7 +52,7 @@ module.exports.run = (client, message, args) => {
       {xp: 12})
     console.log(xpp.xp);
 
-    pEmbed.addField("**XP**", xpp.xp);
+    profEmbed.addField("**XP**", xpp.xp);
 
   // xp.findOne({
   //   userID: message.author.id,
@@ -59,15 +61,15 @@ module.exports.run = (client, message, args) => {
   //   if (err) console.log(err);
   //
   //   if (!res) {
-  //     pEmbed.addField("You do not appear to have any xp...");
+  //     profEmbed.addField("You do not appear to have any xp...");
   //   } else {
   //     console.log(res)
-  //     pEmbed.addField(res.username, res.xp + "xp.");
-  //     // pEmbed.addField(Xp.xp);
+  //     profEmbed.addField(res.username, res.xp + "xp.");
+  //     // profEmbed.addField(Xp.xp);
   //   }
   //
   // })
-  message.channel.send(pEmbed)
+  message.channel.send(profEmbed)
 }
 //yeet f
 module.exports.help = {
