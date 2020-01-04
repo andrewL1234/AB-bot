@@ -6,6 +6,8 @@ const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const dbs = process.env.MONGODB_URL
 
+let txp;
+
 mongoose.connect(dbs, {
   useNewUrlParser: true,
 });

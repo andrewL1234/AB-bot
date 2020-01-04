@@ -46,13 +46,13 @@ module.exports.run = (client, message, args) => {
     .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL);
 
     var exp = new xp(
-      //{userID: id},
-      //{username: usne},
-      //{serverID: server},
+      {userID: id},
+      {username: usne},
+      {serverID: server},
       {xp: 12})
     console.log(exp.xp);
 
-    profEmbed.addField(`XP: `);
+    profEmbed.addField(`XP: ${exp.xp}`);
 
   // xp.findOne({
   //   userID: message.author.id,
@@ -69,7 +69,8 @@ module.exports.run = (client, message, args) => {
   //   }
   //
   // })
-  message.channel.send(profEmbed)
+
+  message.channel.send(profEmbed);
 }
 //yeet f
 module.exports.help = {
