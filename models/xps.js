@@ -18,8 +18,8 @@ const mongoose = require("mongoose");
 // mongoose.connect('mongodb://localhost/test', {
 //   useNewUrlParser: true,
 // });
-const db = process.env.MONGODB_URL
-mongoose.connect('db', {
+const dbs = process.env.MONGODB_URL
+mongoose.connect('dbs', {
   useNewUrlParser: true,
 });
 const Schema = mongoose.Schema;
