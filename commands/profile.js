@@ -1,6 +1,7 @@
 const Discord = module.require("discord.js");
 const mongoose = require("mongoose")
-mongoose.connect('mongodb+srv://${process.env.MUSERNAME}:${process.env.MPASSWORD}@ab-bot-wohsi.mongodb.net/xp', {
+const db = process.env.MONGODB_URL
+mongoose.connect('db', {
   useNewUrlParser: true,
 });
 
