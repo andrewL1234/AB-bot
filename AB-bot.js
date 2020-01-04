@@ -1,6 +1,15 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
+const mongoose = require('mongoose')
+mongoose.connect('mongodb://localhost/test', {
+  useNewUrlParser: true,
+});
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log('connection succesful');
+});
 
 client.on('ready', () => {
   console.log('I am ready!');

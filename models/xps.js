@@ -15,7 +15,7 @@
 // var xpSchema = caseNote.discriminator('Xp', xpShema_raw);
 // var xp = mongoose.model('Xp');
 const mongoose = require("mongoose");
-mongoose.connect('mongodb+srv://${process.env.MUSERNAME}:${process.env.MPASSWORD}@ab-bot-wohsi.mongodb.net/xp', {
+mongoose.connect('mongodb://localhost/test', {
   useNewUrlParser: true,
 });
 const Schema = mongoose.Schema;
@@ -29,7 +29,7 @@ const xpSchema = new Schema({
 });
 
 const xp = mongoose.model('xp', xpSchema);
-const routes = require('./routes')
+const routes = require('./routes');
 // exports.xpSchema = xpSchema;
 // module.exports = xp;
 //( ͡° ͜ʖ ͡°)
