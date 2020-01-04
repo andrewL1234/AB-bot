@@ -48,7 +48,7 @@ client.on('message', message => {
   if(xpInfo[message.author.id]) {
     xpInfo[message.author.id].xp += 5;
   }
-  fs.writeFile('./xp.json', JSON.stringify(xp), (err) => {
+  fs.writeFile('./xp.json', JSON.stringify(xpInfo), (err) => {
 	  if(err) console.log(err)
 	});
 
