@@ -52,9 +52,8 @@ client.on('message', message => {
     console.log('work')
     xpInfo[message.author.id].xp += 5;
   }
-  fs.writeFile('./xp.json', JSON.stringify(xpInfo), (err) => {
-	  if(err) console.log(err)
-	});
+
+  
 
   let prefix = "!";
 	let messageArray = message.content.split(" ");
