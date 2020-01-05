@@ -15,7 +15,7 @@ mongoose.connect(dbs, {
 //   useNewUrlParser: true,
 // });
 var db = mongoose.connection;
-const xp = require('../models/xps.js');
+const xp = require("../models/xps.js");
 // const xp = mongoose.model('xp');
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {

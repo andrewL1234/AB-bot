@@ -8,7 +8,7 @@ mongoose.connect(dbs, {
 });
 let uId;
 
-const xp = require('../models/xps.js');
+const xp = require("../models/xps.js");
 // const xp = mongoose.model('xp');
 
 nUser.save(function (err, nUser) {
