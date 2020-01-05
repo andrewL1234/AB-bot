@@ -1,9 +1,10 @@
+const xps = require("../models/xps.js");
 const dbs = process.env.MONGODB_URL;
 mongoose.connect(dbs, {
   useNewUrlParser: true,
 });
 
-const xp = require("../models/xps.js");
+
 // const xp = mongoose.model('xp');
 
 module.exports.run = (client, message, args) => {

@@ -15,3 +15,4 @@ const xpSchema = new Schema({
 });
 
 const xp = mongoose.model('xp', xpSchema);
+module.exports.xpSchema = xpSchema;

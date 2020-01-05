@@ -1,6 +1,7 @@
 const Discord = module.require("discord.js");
 const mongoose = require("mongoose");
 
+const xps = require("../models/xps.js");
 
 const dbs = process.env.MONGODB_URL;
 mongoose.connect(dbs, {
@@ -10,7 +11,7 @@ mongoose.connect(dbs, {
 //WHAT IS THE SERVER-ID FOR IN THE SCHEMA BRANODN
 
 
-const xp = require("../models/xps.js");
+
 // const xp = mongoose.model('xp');
 //()
 module.exports.run = (client, message, args) => {

@@ -4,6 +4,7 @@ const fs = require('fs');
 // const xpInfo = require('./xp.json');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
+const xps = require("../models/xps.js");
 const dbs = process.env.MONGODB_URL
 
 let txp;
@@ -11,7 +12,7 @@ let txp;
 mongoose.connect(dbs, {
   useNewUrlParser: true,
 });
-const xp = require("../models/xps.js");
+
 // mongoose.connect('mongodb://localhost/test', {
 //   useNewUrlParser: true,
 // });
