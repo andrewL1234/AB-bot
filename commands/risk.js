@@ -3,7 +3,7 @@ mongoose.connect(dbs, {
   useNewUrlParser: true,
 });
 
-const xp = mongoose.model('xp');
+cconst xp = require('./models/xps.js');
 
 module.exports.run = (client, message, args) => {
 	let riskChannel = message.guild.channels.find(section => section.name === 'xp-risking');
@@ -11,7 +11,7 @@ module.exports.run = (client, message, args) => {
 	if(message.channel.name !== riskChannel.name) return message.channel.send("Risk xp in #xp-risking");
 
 	if(args.length === 0) return message.channel.send("Add the amount of xp you want to risk after the command");
-	
+
 	else if(args.length === 1) {
 		if(!isNaN(Number(args[0]))) {
 			let xpRisked = Number(args[0]);

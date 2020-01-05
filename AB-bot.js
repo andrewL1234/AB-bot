@@ -15,7 +15,7 @@ mongoose.connect(dbs, {
 //   useNewUrlParser: true,
 // });
 var db = mongoose.connection;
-const xp = mongoose.model('xp');
+const xp = require('./models/xps.js');
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
   console.log('Connected to MongoDB successfully');

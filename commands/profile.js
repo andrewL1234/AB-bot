@@ -1,6 +1,7 @@
 const Discord = module.require("discord.js");
 const mongoose = require("mongoose");
-var txp = require('./AB-bot.js')(txp); 
+
+var txp = require('./AB-bot.js')(txp);
 const dbs = process.env.MONGODB_URL;
 mongoose.connect(dbs, {
   useNewUrlParser: true,
@@ -9,7 +10,7 @@ mongoose.connect(dbs, {
 //WHAT IS THE SERVER-ID FOR IN THE SCHEMA BRANODN
 
 
-const xp = mongoose.model('xp');
+const xp = require('./models/xps.js');
 
 module.exports.run = (client, message, args) => {
   const profEmbed = new Discord.RichEmbed()
