@@ -3,7 +3,7 @@ mongoose.connect(dbs, {
   useNewUrlParser: true,
 });
 
-xp = require('./models/xps.js');
+xp = require('../models/xps.js');
 const xp = mongoose.model('xp');
 
 module.exports.run = (client, message, args) => {

@@ -10,7 +10,7 @@ mongoose.connect(dbs, {
 //WHAT IS THE SERVER-ID FOR IN THE SCHEMA BRANODN
 
 
-require('./models/xps.js');
+require('../models/xps.js');
 const xp = mongoose.model('xp');
 
 module.exports.run = (client, message, args) => {
