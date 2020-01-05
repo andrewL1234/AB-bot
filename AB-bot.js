@@ -5,13 +5,13 @@ const fs = require('fs');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 // var Models = require("./models");
-const dbs = process.env.MONGODB_URL
+// const dbs = process.env.MONGODB_URL
 
 let txp;
 
-mongoose.connect(dbs, {
-  useNewUrlParser: true,
-});
+// mongoose.connect(dbs, {
+//   useNewUrlParser: true,
+// });
 
 // mongoose.connect('mongodb://localhost/test', {
 //   useNewUrlParser: true,

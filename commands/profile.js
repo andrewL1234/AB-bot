@@ -3,10 +3,10 @@ const mongoose = require("mongoose");
 
 var Models = require("./models");
 
-const dbs = process.env.MONGODB_URL;
-mongoose.connect(dbs, {
-  useNewUrlParser: true,
-});
+// const dbs = process.env.MONGODB_URL;
+// mongoose.connect(dbs, {
+//   useNewUrlParser: true,
+// });
 
 //WHAT IS THE SERVER-ID FOR IN THE SCHEMA BRANODN
 

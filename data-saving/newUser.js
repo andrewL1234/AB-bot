@@ -2,10 +2,10 @@ const Discord = module.require("discord.js");
 const mongoose = module.require("mongoose");
 var Models = require("./models");
 
-const dbs = process.env.MONGODB_URL;
-mongoose.connect(dbs, {
-  useNewUrlParser: true,
-});
+// const dbs = process.env.MONGODB_URL;
+// mongoose.connect(dbs, {
+//   useNewUrlParser: true,
+// });
 let uId;
 
 
