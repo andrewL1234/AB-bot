@@ -4,7 +4,7 @@ const fs = require('fs');
 // const xpInfo = require('./xp.json');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
-// var Models = require("./models");
+// var Models = require("models.js");
 // const dbs = process.env.MONGODB_URL
 
 let txp;
