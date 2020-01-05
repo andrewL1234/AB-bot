@@ -24,7 +24,7 @@ const xp = mongoose.model('xp', xpSchema);
 
 module.exports.run = (client, message, args) => {
   const profEmbed = new Discord.RichEmbed()
-  let id = message.author.id; wait
+  let id;
   let usne = message.author.username;
   var server = message.guild.id;
 
@@ -33,8 +33,8 @@ module.exports.run = (client, message, args) => {
     let id = message.author.id;
   }
   else if(args.length === 1) {
-    let  = message.mentions.users.first()
-    if(!userRequired) {
+    let id = message.mentions.users.first()
+    if(!id) {
       return message.channel.send("Either just type the command to see you profile or @ someone to see theirs")
     }
     profEmbed.setTitle(`Profile of ${userRequired.username}`)
@@ -55,7 +55,8 @@ module.exports.run = (client, message, args) => {
       {xp: 12})
 
     console.log(exp.xp);
-    profEmbed.addField(`User: ${}`)
+    profEmbed.addField(`User: ${exp.usne}`);
+    profEmbed.addField(`Server: ${exp.server}`);
     profEmbed.addField(`XP: ${exp.xp}`);
 
   // xp.findOne({
