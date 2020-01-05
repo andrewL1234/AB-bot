@@ -15,6 +15,7 @@ mongoose.connect(dbs, {
 //   useNewUrlParser: true,
 // });
 var db = mongoose.connection;
+const xp = mongoose.model('xp');
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
   console.log('Connected to MongoDB successfully');
@@ -52,7 +53,6 @@ client.on('message', message => {
     xpInfo[message.author.id].xp += 5;
   }
   fs.writeFile('./xp.json', JSON.stringify(xpInfo), (err) => {
-    console.log(xpInfo[message.author.id].xp)
 	  if(err) console.log(err)
 	});
 

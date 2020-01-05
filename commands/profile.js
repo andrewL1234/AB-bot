@@ -1,5 +1,6 @@
 const Discord = module.require("discord.js");
 const mongoose = require("mongoose");
+var txp = require('./AB-bot.js')(txp); 
 const dbs = process.env.MONGODB_URL;
 mongoose.connect(dbs, {
   useNewUrlParser: true,
@@ -7,20 +8,8 @@ mongoose.connect(dbs, {
 
 //WHAT IS THE SERVER-ID FOR IN THE SCHEMA BRANODN
 
-// mongoose.connect('mongodb://localhost/test', {
-//   useNewUrlParser: true,
-// });
-const Schema = mongoose.Schema;
 
-
-const xpSchema = new Schema({
-  userID: String,
-  username: String,
-  serverID: String,
-  xp: Number
-});
-
-const xp = mongoose.model('xp', xpSchema);
+const xp = mongoose.model('xp');
 
 module.exports.run = (client, message, args) => {
   const profEmbed = new Discord.RichEmbed()
@@ -52,28 +41,14 @@ module.exports.run = (client, message, args) => {
       {userID: id},
       {username: usne},
       {serverID: server},
-      {xp: 12})
+      {xp: txp})
 
     console.log(exp.xp);
     profEmbed.addField(`User: ${exp.usne}`);
     profEmbed.addField(`Server: ${exp.server}`);
     profEmbed.addField(`XP: ${exp.xp}`);
 
-  // xp.findOne({
-  //   userID: message.author.id,
-  //   serverID: message.guild.id
-  // }, (err, res) => {
-  //   if (err) console.log(err);
-  //
-  //   if (!res) {
-  //     profEmbed.addField("You do not appear to have any xp...");
-  //   } else {
-  //     console.log(res)
-  //     profEmbed.addField(res.username, res.xp + "xp.");
-  //     // profEmbed.addField(Xp.xp);
-  //   }
-  //
-  // })
+
 
   message.channel.send(profEmbed);
 }
