@@ -11,7 +11,7 @@ mongoose.connect(dbs, {
 
 
 require('./models/xps.js');
-const xp = mongoose.models('xp');
+const xp = mongoose.model('xp');
 
 module.exports.run = (client, message, args) => {
   const profEmbed = new Discord.RichEmbed()
