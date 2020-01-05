@@ -1,7 +1,7 @@
 const Discord = module.require("discord.js");
 const mongoose = require("mongoose");
 
-var txp = require('./AB-bot.js')(txp);
+
 const dbs = process.env.MONGODB_URL;
 mongoose.connect(dbs, {
   useNewUrlParser: true,
@@ -43,7 +43,7 @@ module.exports.run = (client, message, args) => {
       {userID: id},
       {username: usne},
       {serverID: server},
-      {xp: txp})
+      {xp: 12})
 
     console.log(exp.xp);
     profEmbed.addField(`User: ${exp.usne}`);
