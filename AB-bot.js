@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
-const xpInfo = require('./xp.json');
+// const xpInfo = require('./xp.json');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const dbs = process.env.MONGODB_URL
@@ -48,12 +48,12 @@ client.on('message', message => {
   if(message.channel.type === "dm") return;
 	if(message.author.bot) return;
 
-  if(xpInfo[message.author.id]) {
-    console.log('work')
-    xpInfo[message.author.id].xp += 5;
-  }
+  // if(xpInfo[message.author.id]) {
+  //   console.log('work')
+  //   xpInfo[message.author.id].xp += 5;
+  // }
 
-  
+
 
   let prefix = "!";
 	let messageArray = message.content.split(" ");
@@ -65,7 +65,7 @@ client.on('message', message => {
   let cmd = client.commands.get(command.slice(prefix.length));
 
 	if(cmd) cmd.run(client, message, args);
-  console.log(xpInfo);
+  // console.log(xpInfo);
 });
 
 
