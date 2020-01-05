@@ -4,7 +4,7 @@ const fs = require('fs');
 // const xpInfo = require('./xp.json');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
-const xps = require("../models/xps.js");
+// const Models = require("./models");
 const dbs = process.env.MONGODB_URL
 
 let txp;
@@ -16,13 +16,7 @@ mongoose.connect(dbs, {
 // mongoose.connect('mongodb://localhost/test', {
 //   useNewUrlParser: true,
 // });
-var db = mongoose.connection;
 
-// const xp = mongoose.model('xp');
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
-  console.log('Connected to MongoDB successfully');
-});
 
 client.on('ready', () => {
   console.log('I am ready!');

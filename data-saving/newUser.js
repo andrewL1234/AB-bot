@@ -1,6 +1,6 @@
 const Discord = module.require("discord.js");
 const mongoose = module.require("mongoose");
-const xps = require("../models/xps.js");
+const Models = require("./models");
 
 const dbs = process.env.MONGODB_URL;
 mongoose.connect(dbs, {
