@@ -1,4 +1,4 @@
-const Models = require("./models");
+var Models = require("./models");
 const dbs = process.env.MONGODB_URL;
 mongoose.connect(dbs, {
   useNewUrlParser: true,
