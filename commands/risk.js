@@ -3,7 +3,8 @@ mongoose.connect(dbs, {
   useNewUrlParser: true,
 });
 
-cconst xp = require('./models/xps.js');
+xp = require('./models/xps.js');
+const xp = mongoose.models('xp');
 
 module.exports.run = (client, message, args) => {
 	let riskChannel = message.guild.channels.find(section => section.name === 'xp-risking');

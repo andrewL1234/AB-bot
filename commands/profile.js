@@ -10,7 +10,8 @@ mongoose.connect(dbs, {
 //WHAT IS THE SERVER-ID FOR IN THE SCHEMA BRANODN
 
 
-const xp = require('./models/xps.js');
+require('./models/xps.js');
+const xp = mongoose.models('xp');
 
 module.exports.run = (client, message, args) => {
   const profEmbed = new Discord.RichEmbed()
