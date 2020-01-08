@@ -5,7 +5,9 @@ const mongoose = require("mongoose");
 // });
 
 
-const xpSchema = mongoose.Schema({
+const Schema = mongoose.Schema;
+
+const xpSchema = new Schema({
   userID: String,
   username: String,
   serverID: String,
@@ -13,4 +15,4 @@ const xpSchema = mongoose.Schema({
 });
 
 const xp = mongoose.model('xp', xpSchema);
-modules.export.xp = xp;
+module.exports.xp = xp;
