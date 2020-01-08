@@ -1,4 +1,4 @@
-var xp = require("../../models/xps.js");
+var xp = require("./models/xps.js");
 // mongoose.connect(dbs, {
 //   useNewUrlParser: true,
 // });
