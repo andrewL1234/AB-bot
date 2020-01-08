@@ -47,11 +47,21 @@ client.on('message', message => {
   if(message.channel.type === "dm") return;
 	if(message.author.bot) return;
 
-  if(xpInfo[message.author.id]) {
-    if(err) {
-      console.log(err);
-      nU.save;
+  xp.findOne({
+    userID: message.author,id
+  }, (err) => {
+    if(err) console.log(err);
+    const newDoc = new xo({
+          userID: message.author.id,
+          username: message.author.username,
+          Xp: 10
+          })
+          newDoc.save().catch(err => console.log(err));
     }
+  })
+
+  if(xpInfo[message.author.id]) {
+
     console.log('work')
     xpInfo[message.author.id].xp += 5;
   }
