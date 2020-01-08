@@ -4,8 +4,7 @@ const xp = require("/app/models/xps.js").xp;// const dbs = process.env.MONGODB_U
 // mongoose.connect(dbs, {
 //   useNewUrlParser: true,
 // });
-let uId = message.author.id;
-let User = message.author.username
+
 
 
 // const xp = mongoose.model('xp');
