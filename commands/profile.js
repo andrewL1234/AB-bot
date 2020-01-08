@@ -46,17 +46,17 @@ module.exports.run = (client, message, args) => {
     //   {xp: 12})
 
     const exp = new xp({
-      
+
       userId: id,
       username: usne,
       serverID: server,
-      xp: 0
+      Xp: 0
     });
 
     console.log(exp.xp);
     profEmbed.addField(`User: ${exp.usne}`);
     profEmbed.addField(`Server: ${exp.server}`);
-    profEmbed.addField(`XP: ${exp.xp}`);
+    profEmbed.addField(`XP: ${exp.Xp}`);
 
 
 
