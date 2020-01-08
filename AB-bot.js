@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 // var Models = require("models.js");
 // const dbs = process.env.MONGODB_URL
 const xp = require("/app/models/xps.js").xp;
+const nU = require("/app/data-saving/newUser.js");
 
 let txp;
 
@@ -46,10 +47,14 @@ client.on('message', message => {
   if(message.channel.type === "dm") return;
 	if(message.author.bot) return;
 
-  // if(xpInfo[message.author.id]) {
-  //   console.log('work')
-  //   xpInfo[message.author.id].xp += 5;
-  // }
+  if(xpInfo[message.author.id]) {
+    if(err) {
+      console.log(err);
+      nU.save;
+    }
+    console.log('work')
+    xpInfo[message.author.id].xp += 5;
+  }
 
 
 
