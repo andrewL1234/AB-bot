@@ -11,7 +11,7 @@ const xpSchema = new Schema({
   userID: String,
   username: String,
   serverID: String,
-  xp: Number
+  xp: NumberLong
 });
 
 const xp = mongoose.model('xp', xpSchema);

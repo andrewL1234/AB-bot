@@ -39,11 +39,18 @@ module.exports.run = (client, message, args) => {
   profEmbed.setColor("#06172e")
     .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL);
 
-    var exp = new xp(
-      {userID: id},
-      {username: usne},
-      {serverID: server},
-      {xp: 12})
+    // var exp = new xp(
+    //   {userID: id},
+    //   {username: usne},
+    //   {serverID: server},
+    //   {xp: 12})
+
+    var exp = new xp({
+      userId: id,
+      username: usne,
+      serverID: server,
+      xp: 0
+    });
 
     console.log(exp.xp);
     profEmbed.addField(`User: ${exp.usne}`);
