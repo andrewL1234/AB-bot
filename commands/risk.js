@@ -14,7 +14,7 @@ module.exports.run = (client, message, args) => {
 	else if(args.length === 1) {
 		if(!isNaN(Number(args[0]))) {
 			let xpRisked = Number(args[0]);
-			if (xpRisked > xp.xp) {
+			if (xpRisked > xp.Xp) {
 				return message.channel.send(`You do not have ${xpRisked} to risk.`)
 			}
  			else if(xpRisked >= 100) {
