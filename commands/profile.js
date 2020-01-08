@@ -45,7 +45,7 @@ module.exports.run = (client, message, args) => {
     //   {serverID: server},
     //   {xp: 12})
 
-    var exp = new xp({
+    const exp = new xp({
       userId: id,
       username: usne,
       serverID: server,
