@@ -45,7 +45,7 @@ module.exports.run = (client, message, args) => {
     //   {serverID: server},
     //   {xp: 12})
 
-    const exp = new Schema({
+    const exp = new xpSchema({
 
       userId: id,
       username: usne,
@@ -53,7 +53,7 @@ module.exports.run = (client, message, args) => {
       Xp: 0
     });
 
-    console.log(exp.Schema);
+    console.log(exp.xp);
     profEmbed.addField(`User: ${exp.usne}`);
     profEmbed.addField(`Server: ${exp.server}`);
     profEmbed.addField(`XP: ${exp.Xp}`);
