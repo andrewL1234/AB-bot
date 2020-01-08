@@ -51,9 +51,7 @@ module.exports.run = (client, message, args) => {
       username: usne,
       Xp: 10
     });
-    Xp.save()
-    username.save()
-    userID.save()
+    exp.save()
       .catch(err => console.log(err));
     console.log(exp.Xp);
     profEmbed.addField(`User: ${exp.usne}`);
