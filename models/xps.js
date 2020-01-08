@@ -5,14 +5,12 @@ const mongoose = require("mongoose");
 // });
 
 
-const Schema = mongoose.Schema;
-
-const xpSchema = new Schema({
+const xpSchema = mongoose.Schema({
   userID: String,
   username: String,
   serverID: String,
-  xp: Number
+  Xp: Number
 });
 
 const xp = mongoose.model('xp', xpSchema);
-module.exports.xp = xp;
+modules.export.xp = xp;
