@@ -18,5 +18,5 @@ nUser.save(function (err, nUser) {
             Xp: 10
   });
   newDoc.save().catch(err => console.log(err));
-}
+})
 module.exports.nU;
