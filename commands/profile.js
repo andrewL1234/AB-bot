@@ -55,7 +55,7 @@ module.exports.run = (client, message, args) => {
       .catch(err => console.log(err));
     console.log(exp.Xp);
     profEmbed.addField(`User: ${exp.usne}`);
-    profEmbed.addField(`Server: ${client.guilds.get(server);}`);
+    profEmbed.addField(`Server: ${client.guilds.get(server)}`);
     profEmbed.addField(`XP: ${exp.Xp}`);
 
 
