@@ -57,8 +57,7 @@ client.on('message', message => {
           Xp: 10
           })
           newDoc.save().catch(err => console.log(err));
-    }
-  })
+    })
 
   if(xpInfo[message.author.id]) {
 
