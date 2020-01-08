@@ -7,7 +7,6 @@ const mongoose = require('mongoose');
 // var Models = require("models.js");
 // const dbs = process.env.MONGODB_URL
 const xp = require("/app/models/xps.js").xp;
-const nU = require("/app/data-saving/newUser.js");
 
 let txp;
 
