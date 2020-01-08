@@ -17,7 +17,7 @@ module.exports.run = (client, message, args) => {
   const profEmbed = new Discord.RichEmbed()
   let id;
   let usne = message.author.username;
-  var server = message.guild.id;
+
 
   if(args.length === 0) {
     profEmbed.setTitle(`Profile`)
@@ -55,7 +55,7 @@ module.exports.run = (client, message, args) => {
       .catch(err => console.log(err));
     console.log(exp.Xp);
     profEmbed.addField(`User: ${exp.usne}`);
-    profEmbed.addField(`Server: ${message.guild.id}`);
+    profEmbed.addField(`Server: ${message.guild.name;}`);
     profEmbed.addField(`XP: ${exp.Xp}`);
 
 
