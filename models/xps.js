@@ -14,5 +14,5 @@ const xpSchema = new Schema({
   xp: Number
 });
 
-// const xp = mongoose.model('xp', xpSchema);
-module.exports.xpSchema = xpSchema;
+const xp = mongoose.model('xp', xpSchema);
+module.exports.xp = xp;
