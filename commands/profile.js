@@ -49,13 +49,13 @@ module.exports.run = (client, message, args) => {
 
       userId: id,
       username: usne,
-      serverID: server,
-      Xp: 0
+      Xp: 10
     });
-
+    xp.save()
+      .catch(err => console.log(err));
     console.log(exp.Xp);
     profEmbed.addField(`User: ${exp.usne}`);
-    profEmbed.addField(`Server: ${exp.server}`);
+    profEmbed.addField(`Server: ${message.guild.id}`);
     profEmbed.addField(`XP: ${exp.Xp}`);
 
 
