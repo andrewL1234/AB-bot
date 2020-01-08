@@ -6,7 +6,7 @@ const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 // var Models = require("models.js");
 // const dbs = process.env.MONGODB_URL
-var xp = require("/app/models/xps.js");
+const xp = require("/app/models/xps.js").xp;
 
 let txp;
 
