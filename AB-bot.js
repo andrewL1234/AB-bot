@@ -58,11 +58,11 @@ client.on('message', message => {
           newDoc.save().catch(err => console.log(err));
     })
 
-  if(xpInfo[message.author.id]) {
-
-    console.log('work')
-    xpInfo[message.author.id].xp += 5;
-  }
+  // if(xpInfo[message.author.id]) {
+  //
+  //   console.log('work')
+  //   xpInfo[message.author.id].xp += 5;
+  // }
 
 
 
