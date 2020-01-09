@@ -47,10 +47,10 @@ client.on('message', message => {
 	if(message.author.bot) return;
 
   xp.findOne({
-    userID: message.author,id
+    userID: message.author.id
   }, (err) => {
     if(err) console.log(err);
-    const newDoc = new xo({
+    const newDoc = new xp({
           userID: message.author.id,
           username: message.author.username,
           Xp: 10

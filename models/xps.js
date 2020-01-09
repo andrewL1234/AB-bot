@@ -10,7 +10,6 @@ const Schema = mongoose.Schema;
 const xpSchema = new Schema({
   userID: String,
   username: String,
-  serverID: String,
   Xp: Number
 });
 
